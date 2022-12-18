@@ -1,0 +1,1 @@
+from flask import Flaskfrom utils import *app = Flask(__name__)if __name__ == '__main__':    @app.route("/")    def page_index():        get_all()app.run()
