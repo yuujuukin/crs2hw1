@@ -14,10 +14,9 @@ def page_index():
 
 @app.route("/candidates/<int:pk>")
 def get_candidate(pk):
-    candidate: dict = get_all_candidates(pk)
-    result: str = format_candidates([candidate])
+    candidate: dict = get_candidate_by_pk(pk)
+    result: str = format_candidates(candidate)
     return result
 
 
-app.run(port=5050)
-#
+app.run(port=8000)
