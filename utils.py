@@ -23,12 +23,8 @@ def format_candidates(candidates: list[dict]) -> str:
 def get_all_candidates() -> list[dict]:
     return load_json()
 
-"""
-Не могу понять, почему при переходе на http://127.0.0.1:5000/candidates/1
-показывает всех кандидатов, вместо того, чтобы показывался кардидат по pk
-"""
 
-def get_candidate(pk: int):
+def get_candidate_by_pk(pk: int):
     candidates = get_all_candidates()
     for candidate in candidates:
         if candidate['pk'] == pk:
@@ -43,5 +39,3 @@ def get_candidate(pk: int):
 #             arr.append(item)
 #             print(arr)
 #             return arr
-
-#
