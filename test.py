@@ -1,1 +1,1 @@
-import jsonfrom pprint import pprintcandidates = 'candidates.json'with open(candidates, 'r', encoding='utf-8') as f:    data = json.load(f)def get_all():    arr = []    for item in data:        arr.append(item['skills'])        print(item['name'], item['position'], item['skills'])get_all()
+from utils import *def get_by_pk(pk: int):    pass
